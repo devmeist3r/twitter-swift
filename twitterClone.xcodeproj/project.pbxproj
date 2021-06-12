@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12D47187626A2C4F7E42A81D /* Pods_twitterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59A061A47C27FA9491D11A03 /* Pods_twitterClone.framework */; };
+		E81FA57C25237C040087A5D9 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81FA57B25237C040087A5D9 /* ProfileController.swift */; };
+		E81FA57F252389560087A5D9 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81FA57E252389560087A5D9 /* ProfileHeader.swift */; };
+		E8229DD425098587007B91CC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8229DD325098587007B91CC /* UserService.swift */; };
+		E8229DD625098C21007B91CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8229DD525098C21007B91CC /* User.swift */; };
+		E827600525222726002831D2 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827600425222726002831D2 /* TweetCell.swift */; };
+		E827600825225B21002831D2 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827600725225B21002831D2 /* TweetViewModel.swift */; };
+		E83E145C255499880045B0FC /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E145B255499880045B0FC /* ProfileHeaderViewModel.swift */; };
+		E8410AAE253880CE0024D93F /* ProfileViewFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8410AAD253880CE0024D93F /* ProfileViewFilter.swift */; };
+		E8410AB125388F8C0024D93F /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8410AB025388F8C0024D93F /* ProfileFilterCell.swift */; };
+		E845430624F6B4B900A3F095 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E845430524F6B4B900A3F095 /* SignInController.swift */; };
+		E845430824F6B54300A3F095 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E845430724F6B54300A3F095 /* SignUpController.swift */; };
+		E856C7EC25210B09004E6731 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856C7EB25210B09004E6731 /* Tweet.swift */; };
+		E85844E824F8C15F003EB0BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85844E724F8C15F003EB0BE /* GoogleService-Info.plist */; };
+		E85D888024F6868E0074F371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D887F24F6868E0074F371 /* AppDelegate.swift */; };
+		E85D888224F6868E0074F371 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D888124F6868E0074F371 /* SceneDelegate.swift */; };
+		E85D888424F6868E0074F371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D888324F6868E0074F371 /* ViewController.swift */; };
+		E85D888724F6868E0074F371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85D888524F6868E0074F371 /* Main.storyboard */; };
+		E85D888924F686910074F371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85D888824F686910074F371 /* Assets.xcassets */; };
+		E85D888C24F686910074F371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85D888A24F686910074F371 /* LaunchScreen.storyboard */; };
+		E85D889C24F6877D0074F371 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889B24F6877D0074F371 /* MainTabController.swift */; };
+		E85D889E24F68AD50074F371 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889D24F68AD50074F371 /* FeedController.swift */; };
+		E85D88A024F68B300074F371 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889F24F68B300074F371 /* ExploreController.swift */; };
+		E85D88A224F68B520074F371 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D88A124F68B520074F371 /* NotificationsController.swift */; };
+		E85D88A424F68B910074F371 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D88A324F68B910074F371 /* ConversationsController.swift */; };
+		E85D88A624F695DF0074F371 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D88A524F695DF0074F371 /* Extensions.swift */; };
+		E8642375251E125100FAF31C /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8642374251E125100FAF31C /* UploadTweetController.swift */; };
+		E8642378251E1E4200FAF31C /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8642377251E1E4200FAF31C /* CaptionTextView.swift */; };
+		E864237B2520618B00FAF31C /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E864237A2520618B00FAF31C /* TweetService.swift */; };
+		E8E93B9C24F927EB006F485E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9B24F927EB006F485E /* Constants.swift */; };
+		E8E93B9E24F934E4006F485E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9D24F934E4006F485E /* AuthService.swift */; };
+		E8FEE4B624F7F97100624BF5 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AA24F7F96F00624BF5 /* Roboto-BoldItalic.ttf */; };
+		E8FEE4B724F7F97100624BF5 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AB24F7F96F00624BF5 /* Roboto-Italic.ttf */; };
+		E8FEE4B824F7F97100624BF5 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AC24F7F96F00624BF5 /* Roboto-BlackItalic.ttf */; };
+		E8FEE4B924F7F97100624BF5 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AD24F7F97000624BF5 /* Roboto-MediumItalic.ttf */; };
+		E8FEE4BA24F7F97100624BF5 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AE24F7F97000624BF5 /* Roboto-Thin.ttf */; };
+		E8FEE4BB24F7F97100624BF5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AF24F7F97000624BF5 /* Roboto-Light.ttf */; };
+		E8FEE4BC24F7F97100624BF5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */; };
+		E8FEE4BD24F7F97100624BF5 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B124F7F97000624BF5 /* Roboto-Black.ttf */; };
+		E8FEE4BE24F7F97100624BF5 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B224F7F97100624BF5 /* Roboto-LightItalic.ttf */; };
+		E8FEE4BF24F7F97100624BF5 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B324F7F97100624BF5 /* Roboto-ThinItalic.ttf */; };
+		E8FEE4C024F7F97100624BF5 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B424F7F97100624BF5 /* Roboto-Bold.ttf */; };
+		E8FEE4C124F7F97100624BF5 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B524F7F97100624BF5 /* Roboto-Medium.ttf */; };
+		E8FF8E2424F7CB1100467963 /* ComponentsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF8E2324F7CB1100467963 /* ComponentsFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4DE11A4D306696C9D23A0277 /* Pods-twitterClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterClone.debug.xcconfig"; path = "Target Support Files/Pods-twitterClone/Pods-twitterClone.debug.xcconfig"; sourceTree = "<group>"; };
+		59A061A47C27FA9491D11A03 /* Pods_twitterClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitterClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AE8BADAF3BE0ED4AFED8E5F /* Pods-twitterClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitterClone.release.xcconfig"; path = "Target Support Files/Pods-twitterClone/Pods-twitterClone.release.xcconfig"; sourceTree = "<group>"; };
+		E81FA57B25237C040087A5D9 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		E81FA57E252389560087A5D9 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		E8229DD325098587007B91CC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E8229DD525098C21007B91CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E827600425222726002831D2 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		E827600725225B21002831D2 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		E83E145B255499880045B0FC /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		E8410AAD253880CE0024D93F /* ProfileViewFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFilter.swift; sourceTree = "<group>"; };
+		E8410AB025388F8C0024D93F /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
+		E845430524F6B4B900A3F095 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		E845430724F6B54300A3F095 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		E856C7EB25210B09004E6731 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		E85844E724F8C15F003EB0BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E85D887C24F6868E0074F371 /* twitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85D887F24F6868E0074F371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E85D888124F6868E0074F371 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E85D888324F6868E0074F371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E85D888624F6868E0074F371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E85D888824F686910074F371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E85D888B24F686910074F371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E85D888D24F686910074F371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85D889B24F6877D0074F371 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		E85D889D24F68AD50074F371 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		E85D889F24F68B300074F371 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		E85D88A124F68B520074F371 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		E85D88A324F68B910074F371 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		E85D88A524F695DF0074F371 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E8642374251E125100FAF31C /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		E8642377251E1E4200FAF31C /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
+		E864237A2520618B00FAF31C /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		E8E93B9B24F927EB006F485E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8E93B9D24F934E4006F485E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E8FEE4AA24F7F96F00624BF5 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E8FEE4AB24F7F96F00624BF5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		E8FEE4AC24F7F96F00624BF5 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E8FEE4AD24F7F97000624BF5 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E8FEE4AE24F7F97000624BF5 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		E8FEE4AF24F7F97000624BF5 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		E8FEE4B124F7F97000624BF5 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		E8FEE4B224F7F97100624BF5 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		E8FEE4B324F7F97100624BF5 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		E8FEE4B424F7F97100624BF5 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		E8FEE4B524F7F97100624BF5 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		E8FF8E2324F7CB1100467963 /* ComponentsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E85D887924F6868E0074F371 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12D47187626A2C4F7E42A81D /* Pods_twitterClone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		541333DE207966A27C722A13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DE11A4D306696C9D23A0277 /* Pods-twitterClone.debug.xcconfig */,
+				8AE8BADAF3BE0ED4AFED8E5F /* Pods-twitterClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C95E14915256C06703419F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59A061A47C27FA9491D11A03 /* Pods_twitterClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E82D770D24FC822C006A0D74 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8FF8E2324F7CB1100467963 /* ComponentsFactory.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E83E1435255497B10045B0FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E85D887F24F6868E0074F371 /* AppDelegate.swift */,
+				E85D888124F6868E0074F371 /* SceneDelegate.swift */,
+				E85D888324F6868E0074F371 /* ViewController.swift */,
+				E85D888524F6868E0074F371 /* Main.storyboard */,
+				E85D888824F686910074F371 /* Assets.xcassets */,
+				E85D888A24F686910074F371 /* LaunchScreen.storyboard */,
+				E85D888D24F686910074F371 /* Info.plist */,
+				E85844E724F8C15F003EB0BE /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E845430424F6B49500A3F095 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E845430524F6B4B900A3F095 /* SignInController.swift */,
+				E845430724F6B54300A3F095 /* SignUpController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E85D887324F6868E0074F371 = {
+			isa = PBXGroup;
+			children = (
+				E85D887E24F6868E0074F371 /* twitterClone */,
+				E85D887D24F6868E0074F371 /* Products */,
+				541333DE207966A27C722A13 /* Pods */,
+				7C95E14915256C06703419F9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E85D887D24F6868E0074F371 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E85D887C24F6868E0074F371 /* twitterClone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E85D887E24F6868E0074F371 /* twitterClone */ = {
+			isa = PBXGroup;
+			children = (
+				E85D889624F686D80074F371 /* API */,
+				E82D770D24FC822C006A0D74 /* Components */,
+				E85D889724F686DA0074F371 /* Controller */,
+				E8FEE4A924F7F94B00624BF5 /* fonts */,
+				E85D889A24F686E30074F371 /* Model */,
+				E83E1435255497B10045B0FC /* Supporting Files */,
+				E85D889324F686C10074F371 /* Utils */,
+				E85D889924F686E10074F371 /* View */,
+				E85D889824F686DB0074F371 /* ViewModel */,
+			);
+			path = twitterClone;
+			sourceTree = "<group>";
+		};
+		E85D889324F686C10074F371 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E85D88A524F695DF0074F371 /* Extensions.swift */,
+				E8E93B9B24F927EB006F485E /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E85D889624F686D80074F371 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E8E93B9D24F934E4006F485E /* AuthService.swift */,
+				E8229DD325098587007B91CC /* UserService.swift */,
+				E864237A2520618B00FAF31C /* TweetService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E85D889724F686DA0074F371 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E845430424F6B49500A3F095 /* Authentication */,
+				E85D889B24F6877D0074F371 /* MainTabController.swift */,
+				E85D889D24F68AD50074F371 /* FeedController.swift */,
+				E85D889F24F68B300074F371 /* ExploreController.swift */,
+				E85D88A124F68B520074F371 /* NotificationsController.swift */,
+				E85D88A324F68B910074F371 /* ConversationsController.swift */,
+				E8642374251E125100FAF31C /* UploadTweetController.swift */,
+				E81FA57B25237C040087A5D9 /* ProfileController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E85D889824F686DB0074F371 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E827600725225B21002831D2 /* TweetViewModel.swift */,
+				E83E145B255499880045B0FC /* ProfileHeaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E85D889924F686E10074F371 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8642377251E1E4200FAF31C /* CaptionTextView.swift */,
+				E827600425222726002831D2 /* TweetCell.swift */,
+				E81FA57E252389560087A5D9 /* ProfileHeader.swift */,
+				E8410AAD253880CE0024D93F /* ProfileViewFilter.swift */,
+				E8410AB025388F8C0024D93F /* ProfileFilterCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E85D889A24F686E30074F371 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8229DD525098C21007B91CC /* User.swift */,
+				E856C7EB25210B09004E6731 /* Tweet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8FEE4A924F7F94B00624BF5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E8FEE4B124F7F97000624BF5 /* Roboto-Black.ttf */,
+				E8FEE4AC24F7F96F00624BF5 /* Roboto-BlackItalic.ttf */,
+				E8FEE4B424F7F97100624BF5 /* Roboto-Bold.ttf */,
+				E8FEE4AA24F7F96F00624BF5 /* Roboto-BoldItalic.ttf */,
+				E8FEE4AB24F7F96F00624BF5 /* Roboto-Italic.ttf */,
+				E8FEE4AF24F7F97000624BF5 /* Roboto-Light.ttf */,
+				E8FEE4B224F7F97100624BF5 /* Roboto-LightItalic.ttf */,
+				E8FEE4B524F7F97100624BF5 /* Roboto-Medium.ttf */,
+				E8FEE4AD24F7F97000624BF5 /* Roboto-MediumItalic.ttf */,
+				E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */,
+				E8FEE4AE24F7F97000624BF5 /* Roboto-Thin.ttf */,
+				E8FEE4B324F7F97100624BF5 /* Roboto-ThinItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E85D887B24F6868E0074F371 /* twitterClone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E85D889024F686920074F371 /* Build configuration list for PBXNativeTarget "twitterClone" */;
+			buildPhases = (
+				B8800F6EBECC85F47031C1C1 /* [CP] Check Pods Manifest.lock */,
+				E85D887824F6868E0074F371 /* Sources */,
+				E85D887924F6868E0074F371 /* Frameworks */,
+				E85D887A24F6868E0074F371 /* Resources */,
+				2E092462E2F6E527E303625E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = twitterClone;
+			productName = twitterClone;
+			productReference = E85D887C24F6868E0074F371 /* twitterClone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E85D887424F6868E0074F371 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Lucas Inocencio";
+				TargetAttributes = {
+					E85D887B24F6868E0074F371 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = E85D887724F6868E0074F371 /* Build configuration list for PBXProject "twitterClone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E85D887324F6868E0074F371;
+			productRefGroup = E85D887D24F6868E0074F371 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E85D887B24F6868E0074F371 /* twitterClone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E85D887A24F6868E0074F371 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FEE4C024F7F97100624BF5 /* Roboto-Bold.ttf in Resources */,
+				E8FEE4BA24F7F97100624BF5 /* Roboto-Thin.ttf in Resources */,
+				E85D888C24F686910074F371 /* LaunchScreen.storyboard in Resources */,
+				E8FEE4BE24F7F97100624BF5 /* Roboto-LightItalic.ttf in Resources */,
+				E8FEE4BC24F7F97100624BF5 /* Roboto-Regular.ttf in Resources */,
+				E8FEE4C124F7F97100624BF5 /* Roboto-Medium.ttf in Resources */,
+				E8FEE4B824F7F97100624BF5 /* Roboto-BlackItalic.ttf in Resources */,
+				E85D888924F686910074F371 /* Assets.xcassets in Resources */,
+				E8FEE4BD24F7F97100624BF5 /* Roboto-Black.ttf in Resources */,
+				E85844E824F8C15F003EB0BE /* GoogleService-Info.plist in Resources */,
+				E8FEE4B724F7F97100624BF5 /* Roboto-Italic.ttf in Resources */,
+				E8FEE4B924F7F97100624BF5 /* Roboto-MediumItalic.ttf in Resources */,
+				E8FEE4B624F7F97100624BF5 /* Roboto-BoldItalic.ttf in Resources */,
+				E85D888724F6868E0074F371 /* Main.storyboard in Resources */,
+				E8FEE4BB24F7F97100624BF5 /* Roboto-Light.ttf in Resources */,
+				E8FEE4BF24F7F97100624BF5 /* Roboto-ThinItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E092462E2F6E527E303625E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-twitterClone/Pods-twitterClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-twitterClone/Pods-twitterClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-twitterClone/Pods-twitterClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8800F6EBECC85F47031C1C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-twitterClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E85D887824F6868E0074F371 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8410AAE253880CE0024D93F /* ProfileViewFilter.swift in Sources */,
+				E85D888424F6868E0074F371 /* ViewController.swift in Sources */,
+				E864237B2520618B00FAF31C /* TweetService.swift in Sources */,
+				E85D88A624F695DF0074F371 /* Extensions.swift in Sources */,
+				E85D888024F6868E0074F371 /* AppDelegate.swift in Sources */,
+				E845430624F6B4B900A3F095 /* SignInController.swift in Sources */,
+				E8642375251E125100FAF31C /* UploadTweetController.swift in Sources */,
+				E8229DD625098C21007B91CC /* User.swift in Sources */,
+				E8642378251E1E4200FAF31C /* CaptionTextView.swift in Sources */,
+				E81FA57F252389560087A5D9 /* ProfileHeader.swift in Sources */,
+				E85D88A424F68B910074F371 /* ConversationsController.swift in Sources */,
+				E83E145C255499880045B0FC /* ProfileHeaderViewModel.swift in Sources */,
+				E81FA57C25237C040087A5D9 /* ProfileController.swift in Sources */,
+				E85D889E24F68AD50074F371 /* FeedController.swift in Sources */,
+				E8FF8E2424F7CB1100467963 /* ComponentsFactory.swift in Sources */,
+				E856C7EC25210B09004E6731 /* Tweet.swift in Sources */,
+				E8410AB125388F8C0024D93F /* ProfileFilterCell.swift in Sources */,
+				E827600825225B21002831D2 /* TweetViewModel.swift in Sources */,
+				E8E93B9C24F927EB006F485E /* Constants.swift in Sources */,
+				E85D889C24F6877D0074F371 /* MainTabController.swift in Sources */,
+				E85D88A224F68B520074F371 /* NotificationsController.swift in Sources */,
+				E827600525222726002831D2 /* TweetCell.swift in Sources */,
+				E85D888224F6868E0074F371 /* SceneDelegate.swift in Sources */,
+				E8229DD425098587007B91CC /* UserService.swift in Sources */,
+				E845430824F6B54300A3F095 /* SignUpController.swift in Sources */,
+				E85D88A024F68B300074F371 /* ExploreController.swift in Sources */,
+				E8E93B9E24F934E4006F485E /* AuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E85D888524F6868E0074F371 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E85D888624F6868E0074F371 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E85D888A24F686910074F371 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E85D888B24F686910074F371 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E85D888E24F686920074F371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E85D888F24F686920074F371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E85D889124F686920074F371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE11A4D306696C9D23A0277 /* Pods-twitterClone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y65JAZKR5L;
+				INFOPLIST_FILE = twitterClone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.twitterClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E85D889224F686920074F371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AE8BADAF3BE0ED4AFED8E5F /* Pods-twitterClone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y65JAZKR5L;
+				INFOPLIST_FILE = twitterClone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.twitterClone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E85D887724F6868E0074F371 /* Build configuration list for PBXProject "twitterClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85D888E24F686920074F371 /* Debug */,
+				E85D888F24F686920074F371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E85D889024F686920074F371 /* Build configuration list for PBXNativeTarget "twitterClone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85D889124F686920074F371 /* Debug */,
+				E85D889224F686920074F371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E85D887424F6868E0074F371 /* Project object */;
+}
