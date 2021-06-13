@@ -1,11 +1,3 @@
-//
-//  ProfileHeader.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 29/09/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 
 protocol ProfileHeaderDelegate: AnyObject {
@@ -43,7 +35,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private let profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.backgroundColor = .lightGray
         iv.layer.borderColor = UIColor.white.cgColor
@@ -66,7 +58,7 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.font = UIFont(name: "Roboto-Bold", size: 20)
-        label.text = "Eddie Brock"
+        label.text = ""
         return label
     }()
     
@@ -74,7 +66,7 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont(name: "Roboto-Regular", size: 16)
         label.textColor = .lightGray
-        label.text = "@venom"
+        label.text = ""
         return label
     }()
     
@@ -188,6 +180,9 @@ class ProfileHeader: UICollectionReusableView {
         
         followingLabel.attributedText = viewModel.followingString
         followersLabel.attributedText = viewModel.followerString
+        
+        fullnameLabel.text = user.fullname
+        usernameLabel.text = viewModel.usernameFormated
     }
 }
 

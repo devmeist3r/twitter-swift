@@ -1,11 +1,3 @@
-//
-//  ProfileHeaderViewModel.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 05/11/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
@@ -29,6 +21,10 @@ enum ProfileFilterOptions: Int, CaseIterable {
 struct ProfileHeaderViewModel {
     
     private let user: User
+    
+    var usernameFormated: String {
+        return "@\(user.username)"
+    }
     
     var followerString: NSAttributedString? {
         return attributedText(withValue: 0, text: " Followers")

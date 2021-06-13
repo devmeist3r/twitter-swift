@@ -1,11 +1,3 @@
-//
-//  TweetViewModel.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 28/09/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 
 struct TweetViewModel {

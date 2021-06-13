@@ -1,11 +1,3 @@
-//
-//  UserService.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 09/09/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import Firebase
 
 struct UserService {
@@ -17,6 +9,20 @@ struct UserService {
             
             let user = User(uid: uid, dictionary: dictionary)
             completion(user)
+        }
+    }
+    
+    func fetchUsers(completion: @escaping([User]) -> Void ) {
+        var users = [User]()
+        REF_USERS.observe(.childAdded) { snapshot in
+            let uid = snapshot.key
+            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
+            
+            let user = User(uid: uid, dictionary: dictionary)
+            if user.uid != Auth.auth().currentUser?.uid {
+                users.append(user)
+            }
+            completion(users)
         }
     }
 }

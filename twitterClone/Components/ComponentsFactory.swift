@@ -1,11 +1,3 @@
-//
-//  Utilities.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 27/08/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import MaterialComponents
 import UIKit
 

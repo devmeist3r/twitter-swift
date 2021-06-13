@@ -1,11 +1,3 @@
-//
-//  FeedController.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 26/08/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 import SDWebImage
 
@@ -22,6 +14,7 @@ class FeedController: UICollectionViewController {
     
     private var tweets = [Tweet]() {
         didSet {
+            tweets.sort(by: {$0.timestamp! > $1.timestamp!})
             collectionView.reloadData()
         }
     }

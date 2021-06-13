@@ -1,11 +1,3 @@
-//
-//  AuthService.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 28/08/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import Foundation
 import Firebase
 

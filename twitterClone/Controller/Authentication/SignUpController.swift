@@ -1,11 +1,3 @@
-//
-//  SignUpController.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 26/08/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import Firebase
 import MaterialComponents
 import UIKit
@@ -47,7 +39,9 @@ class SignUpController: UIViewController {
     
     private lazy var emailTextField: MDCTextField = {
         let textFieldFloating = ComponentsFactory.textFieldInput(placeholder: "E-mail", keyboardType: .emailAddress)
+        textFieldFloating.autocorrectionType = .no
         textFieldControllerFloatingEmail = ComponentsFactory.floatLabel(textFieldFloating: textFieldFloating)
+        
         return textFieldFloating
     }()
     
@@ -60,12 +54,14 @@ class SignUpController: UIViewController {
     
     private lazy var fullNameTextField: MDCTextField = {
         let textFieldFloating = ComponentsFactory.textFieldInput(placeholder: "Nome completo", keyboardType: .emailAddress)
+        textFieldFloating.autocorrectionType = .no
         textFieldControllerFloatingFullname = ComponentsFactory.floatLabel(textFieldFloating: textFieldFloating)
         return textFieldFloating
     }()
     
     private lazy var usernameTextField: MDCTextField = {
         let textFieldFloating = ComponentsFactory.textFieldInput(placeholder: "Apelido", keyboardType: .emailAddress)
+        textFieldFloating.autocorrectionType = .no
         textFieldControllerFloatingUsername = ComponentsFactory.floatLabel(textFieldFloating: textFieldFloating)
         return textFieldFloating
     }()

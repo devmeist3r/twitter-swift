@@ -36,6 +36,7 @@
 		E8642375251E125100FAF31C /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8642374251E125100FAF31C /* UploadTweetController.swift */; };
 		E8642378251E1E4200FAF31C /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8642377251E1E4200FAF31C /* CaptionTextView.swift */; };
 		E864237B2520618B00FAF31C /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E864237A2520618B00FAF31C /* TweetService.swift */; };
+		E8BD33BF26750493008A394B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD33BE26750493008A394B /* UserCell.swift */; };
 		E8E93B9C24F927EB006F485E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9B24F927EB006F485E /* Constants.swift */; };
 		E8E93B9E24F934E4006F485E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9D24F934E4006F485E /* AuthService.swift */; };
 		E8FEE4B624F7F97100624BF5 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4AA24F7F96F00624BF5 /* Roboto-BoldItalic.ttf */; };
@@ -87,6 +88,7 @@
 		E8642374251E125100FAF31C /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		E8642377251E1E4200FAF31C /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		E864237A2520618B00FAF31C /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		E8BD33BE26750493008A394B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		E8E93B9B24F927EB006F485E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8E93B9D24F934E4006F485E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E8FEE4AA24F7F96F00624BF5 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				E81FA57E252389560087A5D9 /* ProfileHeader.swift */,
 				E8410AAD253880CE0024D93F /* ProfileViewFilter.swift */,
 				E8410AB025388F8C0024D93F /* ProfileFilterCell.swift */,
+				E8BD33BE26750493008A394B /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				E827600825225B21002831D2 /* TweetViewModel.swift in Sources */,
 				E8E93B9C24F927EB006F485E /* Constants.swift in Sources */,
 				E85D889C24F6877D0074F371 /* MainTabController.swift in Sources */,
+				E8BD33BF26750493008A394B /* UserCell.swift in Sources */,
 				E85D88A224F68B520074F371 /* NotificationsController.swift in Sources */,
 				E827600525222726002831D2 /* TweetCell.swift in Sources */,
 				E85D888224F6868E0074F371 /* SceneDelegate.swift in Sources */,

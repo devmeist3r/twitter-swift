@@ -1,11 +1,3 @@
-//
-//  User.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 09/09/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 

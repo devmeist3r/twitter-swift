@@ -1,11 +1,3 @@
-//
-//  CaptionTextView.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 25/09/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 
 class CaptionTextView: UITextView {
