@@ -7,6 +7,8 @@ struct User {
     let username: String
     var profileImageUrl: URL?
     let uid: String
+    var isFollowed = false
+    var stats: UserRelantionsStats?
     
     var isCurrentUser: Bool {
         return Auth.auth().currentUser?.uid == uid

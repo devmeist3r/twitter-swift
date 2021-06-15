@@ -1,4 +1,5 @@
 import UIKit
+import JGProgressHUD
 
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
@@ -92,10 +93,22 @@ extension UIColor {
 // MARK: - UIViewController
 
 extension UIViewController {
+    static let hud = JGProgressHUD(style: .dark)
+    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+    
+    func showLoader(_ show: Bool, withText text: String? = "Loading") {
+        view.endEditing(true)
+        UIViewController.hud.textLabel.text = text
+        if show {
+            UIViewController.hud.show(in: view)
+        } else {
+            UIViewController.hud.dismiss()
+        }
     }
     
     @objc func dismissKeyboard() {

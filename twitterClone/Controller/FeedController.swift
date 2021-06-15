@@ -47,6 +47,7 @@ class FeedController: UICollectionViewController {
         
         collectionView.register(TweetCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.backgroundColor = .systemBackground
+        collectionView.showsVerticalScrollIndicator = false
         
         let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageView.contentMode = .scaleAspectFit

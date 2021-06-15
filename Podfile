@@ -20,4 +20,7 @@ target 'twitterClone' do
   #SDWebImage
   pod 'SDWebImage'
   
+  #JGProgressHUD
+  pod 'JGProgressHUD'
+  
 end

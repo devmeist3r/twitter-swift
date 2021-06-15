@@ -104,6 +104,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.4.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - JGProgressHUD (2.2)
   - leveldb-library (1.22.1)
   - MaterialComponents (124.2.0):
     - MaterialComponents/ActionSheet (= 124.2.0)
@@ -766,6 +767,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - JGProgressHUD
   - MaterialComponents
   - SDWebImage
 
@@ -783,6 +785,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - JGProgressHUD
     - leveldb-library
     - MaterialComponents
     - MDFInternationalization
@@ -806,6 +809,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 11e3a5f2c190327df1a4a5d7e7ae3d4d5b9c9e4c
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -816,6 +820,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 7113a5bd1942e21b2f52ba3d947c9e69c557136e
+PODFILE CHECKSUM: c2f0b44b7b5129b2855abdde0280080933b29877
 
 COCOAPODS: 1.10.1

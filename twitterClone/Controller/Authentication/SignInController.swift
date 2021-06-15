@@ -15,6 +15,8 @@ class SignInController: UIViewController {
   
     private lazy var emailTextField: MDCTextField = {
         let textFieldFloating = ComponentsFactory.textFieldInput(placeholder: "E-mail", keyboardType: .emailAddress)
+        textFieldFloating.autocorrectionType = .no
+        textFieldFloating.autocapitalizationType = .none
         textFieldControllerFloatingEmail = ComponentsFactory.floatLabel(textFieldFloating: textFieldFloating)
         return textFieldFloating
     }()
@@ -60,9 +62,10 @@ class SignInController: UIViewController {
     @objc func handleButtonLogin() {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        
+        showLoader(true)
         AuthService().logUserIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
+                self.showLoader(false)
                 print("DEBUG: Error logging in \(error.localizedDescription)")
                 return
             }
@@ -75,6 +78,8 @@ class SignInController: UIViewController {
             tab.authenticateUserAndConfigureUI()
             
             self.dismiss(animated: true, completion: nil)
+            
+            self.showLoader(false)
         }
     }
     

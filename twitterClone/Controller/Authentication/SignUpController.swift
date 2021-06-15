@@ -99,15 +99,21 @@ class SignUpController: UIViewController {
         let credentials = AuthCredentials(profileImage: profileImage, email: email, password: password, fullname: fullname, username: username)
         
         AuthService.shared.registerUser(credentials: credentials) { (error, ref) in
+            self.showLoader(true)
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+                self.showLoader(false)
+                return
+            }
+            
             guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
             guard let tab = window.rootViewController as? MainTabController else { return }
             
             tab.authenticateUserAndConfigureUI()
             
             self.dismiss(animated: true, completion: nil)
+            self.showLoader(false)
         }
-        
-        
     }
     
     @objc func handleShowSignIn() {
