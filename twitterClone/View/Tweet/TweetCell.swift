@@ -3,6 +3,7 @@ import UIKit
 // MARK: - Protocol
 protocol TweetCellDelegate: AnyObject {
     func handleProfileImageTapped(_ cell: TweetCell)
+    func handleReplyTapped(_ cell: TweetCell)
 }
 
 class TweetCell: UICollectionViewCell {
@@ -42,7 +43,7 @@ class TweetCell: UICollectionViewCell {
     
     private lazy var commentButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "comment"), for: .normal)
+        button.setImage(UIImage(systemName: "message"), for: .normal)
         button.tintColor = .darkGray
         button.setDimensions(width: 20, height: 20)
         button.addTarget(self, action: #selector(handleCommentTapped), for: .touchUpInside)
@@ -51,7 +52,7 @@ class TweetCell: UICollectionViewCell {
     
     private lazy var retweetButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "retweet"), for: .normal)
+        button.setImage(UIImage(systemName: "repeat"), for: .normal)
         button.tintColor = .darkGray
         button.setDimensions(width: 20, height: 20)
         button.addTarget(self, action: #selector(handleRetweetTapped), for: .touchUpInside)
@@ -60,7 +61,7 @@ class TweetCell: UICollectionViewCell {
     
     private lazy var likeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "like"), for: .normal)
+        button.setImage(UIImage(systemName: "suit.heart"), for: .normal)
         button.tintColor = .darkGray
         button.setDimensions(width: 20, height: 20)
         button.addTarget(self, action: #selector(handleLikeTapped), for: .touchUpInside)
@@ -69,7 +70,7 @@ class TweetCell: UICollectionViewCell {
     
     private lazy var shareButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "share"), for: .normal)
+        button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .darkGray
         button.setDimensions(width: 20, height: 20)
         button.addTarget(self, action: #selector(handleShareTapped), for: .touchUpInside)
@@ -99,7 +100,7 @@ class TweetCell: UICollectionViewCell {
         let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton, likeButton, shareButton])
         
         actionStack.axis = .horizontal
-        actionStack.spacing = 72
+        actionStack.spacing = 60
         
         addSubview(actionStack)
         actionStack.centerX(inView: self)
@@ -117,7 +118,7 @@ class TweetCell: UICollectionViewCell {
     
     // MARK: - Selectors
     @objc func handleCommentTapped() {
-        print("DEBUG: Comment Tapped")
+        delegate?.handleReplyTapped(self)
     }
     
     @objc func handleRetweetTapped() {
@@ -140,15 +141,9 @@ class TweetCell: UICollectionViewCell {
     
     func configure() {
         guard let tweet = tweet else { return }
-        
-        
         let viewModel = TweetViewModel(tweet: tweet)
-        
         captionLabel.text = tweet.caption
-        
-        
         profileImageView.sd_setImage(with: viewModel.profileImageUrl, completed: nil)
         infoLabel.attributedText = viewModel.userInfoText
-        
     }
 }
