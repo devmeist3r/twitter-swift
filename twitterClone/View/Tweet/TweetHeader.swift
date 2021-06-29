@@ -31,7 +31,7 @@ class TweetHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.font = UIFont(name: "Roboto-Bold", size: 14)
-        label.text = "a"
+        label.text = ""
         return label
     }()
     
@@ -39,7 +39,7 @@ class TweetHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont(name: "Roboto-Regular", size: 14)
         label.textColor = .lightGray
-        label.text = "a"
+        label.text = ""
         return label
     }()
     
@@ -47,7 +47,7 @@ class TweetHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont(name: "Roboto-Bold", size: 16)
         label.numberOfLines = 0
-        label.text = "Some test caption from spiderman for now."
+        label.text = ""
         return label
     }()
     
@@ -56,7 +56,7 @@ class TweetHeader: UICollectionReusableView {
         label.textColor = .lightGray
         label.font = UIFont(name: "Roboto-Regular", size: 14)
         label.textAlignment = .left
-        label.text = "6:33 PM - 01/28/2020"
+        label.text = ""
         return label
     }()
     
@@ -203,7 +203,7 @@ class TweetHeader: UICollectionReusableView {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: imageName), for: .normal)
         button.tintColor = .darkGray
-        button.setDimensions(width: 20, height: 20)
+        button.setDimensions(width: 22, height: 20)
         return button
     }
     
@@ -218,5 +218,7 @@ class TweetHeader: UICollectionReusableView {
         dateLabel.text = viewModel.headerTimestamp
         retweetsLabel.attributedText = viewModel.retweetsAttributedString
         likesLabel.attributedText = viewModel.likesAttributedString
+        likeButton.setImage(viewModel.likeButtonImage, for: .normal)
+        likeButton.tintColor = viewModel.likeButtonTintColor
     }
 }

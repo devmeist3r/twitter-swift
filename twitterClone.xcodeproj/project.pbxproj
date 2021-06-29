@@ -46,6 +46,8 @@
 		E8E2A89B267A465F001D606F /* TweetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2A89A267A465F001D606F /* TweetHeader.swift */; };
 		E8E93B9C24F927EB006F485E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9B24F927EB006F485E /* Constants.swift */; };
 		E8E93B9E24F934E4006F485E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9D24F934E4006F485E /* AuthService.swift */; };
+		E8FA3DC0268B729300D59B41 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3DBF268B729300D59B41 /* Notification.swift */; };
+		E8FA3DC2268B918B00D59B41 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3DC1268B918B00D59B41 /* NotificationService.swift */; };
 		E8FEE4BC24F7F97100624BF5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */; };
 		E8FEE4C024F7F97100624BF5 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B424F7F97100624BF5 /* Roboto-Bold.ttf */; };
 		E8FF8E2424F7CB1100467963 /* ComponentsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FF8E2324F7CB1100467963 /* ComponentsFactory.swift */; };
@@ -95,6 +97,8 @@
 		E8E2A89A267A465F001D606F /* TweetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetHeader.swift; sourceTree = "<group>"; };
 		E8E93B9B24F927EB006F485E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8E93B9D24F934E4006F485E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E8FA3DBF268B729300D59B41 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E8FA3DC1268B918B00D59B41 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		E8FEE4B424F7F97100624BF5 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		E8FF8E2324F7CB1100467963 /* ComponentsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsFactory.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				E8E93B9D24F934E4006F485E /* AuthService.swift */,
 				E8229DD325098587007B91CC /* UserService.swift */,
 				E864237A2520618B00FAF31C /* TweetService.swift */,
+				E8FA3DC1268B918B00D59B41 /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				E8229DD525098C21007B91CC /* User.swift */,
 				E856C7EB25210B09004E6731 /* Tweet.swift */,
 				E8E2A896267964F5001D606F /* UserRelantionsStats.swift */,
+				E8FA3DBF268B729300D59B41 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				E85D888024F6868E0074F371 /* AppDelegate.swift in Sources */,
 				E829FED72682187C002A3457 /* ActionSheetLauncher.swift in Sources */,
 				E845430624F6B4B900A3F095 /* SignInController.swift in Sources */,
+				E8FA3DC2268B918B00D59B41 /* NotificationService.swift in Sources */,
 				E8642375251E125100FAF31C /* UploadTweetController.swift in Sources */,
 				E8229DD625098C21007B91CC /* User.swift in Sources */,
 				E8642378251E1E4200FAF31C /* CaptionTextView.swift in Sources */,
@@ -446,6 +453,7 @@
 				E829FED52680D775002A3457 /* UploadTweetViewModel.swift in Sources */,
 				E856C7EC25210B09004E6731 /* Tweet.swift in Sources */,
 				E8410AB125388F8C0024D93F /* ProfileFilterCell.swift in Sources */,
+				E8FA3DC0268B729300D59B41 /* Notification.swift in Sources */,
 				E827600825225B21002831D2 /* TweetViewModel.swift in Sources */,
 				E8E93B9C24F927EB006F485E /* Constants.swift in Sources */,
 				E85D889C24F6877D0074F371 /* MainTabController.swift in Sources */,

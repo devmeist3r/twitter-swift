@@ -36,7 +36,7 @@ class TweetCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Roboto-Regular", size: 14)
         label.numberOfLines = 0
-        label.text = "Some test caption"
+        label.text = ""
         return label
     }()
     
