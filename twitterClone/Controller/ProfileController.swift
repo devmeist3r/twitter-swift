@@ -139,6 +139,8 @@ extension ProfileController: ProfileHeaderDelegate {
                 print("follow")
                 self.user.isFollowed = true
                 self.collectionView.reloadData()
+                
+                NotificationService.shared.uploadNotification(type: .follow, user: self.user)
             }
         }
     }
