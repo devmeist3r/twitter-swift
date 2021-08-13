@@ -1,16 +1,21 @@
 import UIKit
 
+protocol NotificationCellDelegate: AnyObject {
+    func handleProfileImageTapped(_ cell: NotificationCell)
+}
+
 class NotificationCell: UITableViewCell {
     
     // MARK: - Properties
-    
     var notification: Notification? {
         didSet { configure() }
     }
     
+    weak var delegate: NotificationCellDelegate?
+    
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.setDimensions(width: 48, height: 48)
         iv.layer.cornerRadius = 48 / 2
@@ -27,7 +32,7 @@ class NotificationCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 2
         label.font = UIFont(name: "Roboto-Bold", size: 14)
-        label.text = "Some text notification message"
+        label.text = ""
         return label
     }()
     
@@ -40,7 +45,7 @@ class NotificationCell: UITableViewCell {
         stack.spacing = 8
         stack.alignment = .center
         
-        addSubview(stack)
+        contentView.addSubview(stack)
         stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
         stack.anchor(right: rightAnchor, paddingRight:  12)
     }
@@ -52,7 +57,7 @@ class NotificationCell: UITableViewCell {
     // MARK: - Selectors
     
     @objc func handleProfileImageTapped() {
-        
+        delegate?.handleProfileImageTapped(self)
     }
     
     func configure() {

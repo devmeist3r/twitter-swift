@@ -18,16 +18,11 @@ struct NotificationViewModel {
     
     var notificationMessage: String {
         switch type {
-        case .follow:
-            return " started following you"
-        case .like:
-            return " liked your tweet"
-        case .reply:
-            return " replied to your tweet"
-        case .retweet:
-            return " retweeted your tweet"
-        case .mention:
-            return " mentioned you in a tweet"
+        case .follow: return " started following you"
+        case .like: return " liked your tweet"
+        case .reply: return " replied to your tweet"
+        case .retweet: return " retweeted your tweet"
+        case .mention: return " mentioned you in a tweet"
         }
     }
     
