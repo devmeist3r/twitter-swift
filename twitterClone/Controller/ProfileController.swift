@@ -1,11 +1,3 @@
-//
-//  ProfileController.swift
-//  twitterClone
-//
-//  Created by Lucas Inocencio on 29/09/20.
-//  Copyright © 2020 Lucas Inocencio. All rights reserved.
-//
-
 import UIKit
 
 private let reuseIdentifier = "TweetCell"
@@ -16,10 +8,20 @@ class ProfileController: UICollectionViewController {
     // MARK: - Properties
     
     private var user: User
-    private var tweets = [Tweet]() {
-        didSet {
-            tweets.sort(by: {$0.timestamp! > $1.timestamp!})
-            collectionView.reloadData()
+    
+    private var selectedFilter: ProfileFilterOptions = .tweets {
+        didSet { collectionView.reloadData() }
+    }
+    
+    private var tweets = [Tweet]()
+    private var likedTweets = [Tweet]()
+    private var replies = [Tweet]()
+    
+    private var currentDataSource: [Tweet] {
+        switch selectedFilter {
+        case .tweets: return tweets
+        case .replies: return replies
+        case .likes: return likedTweets
         }
     }
     
@@ -50,6 +52,7 @@ class ProfileController: UICollectionViewController {
     func fetchTweets() {
         TweetService.shared.fetchTweets(forUser: user) { tweets in
             self.tweets = tweets
+            self.collectionView.reloadData()
         }
     }
     
@@ -62,8 +65,8 @@ class ProfileController: UICollectionViewController {
     
     func fetchUserStats() {
         UserService.shared.fetchUserStats(uid: user.uid) { stats in
-//            print("DEBUG: User has \(stats.followers) followers")
-//            print("DEBUG: User is following \(stats.following)")
+            //            print("DEBUG: User has \(stats.followers) followers")
+            //            print("DEBUG: User is following \(stats.following)")
             self.user.stats = stats
             self.collectionView.reloadData()
         }
@@ -85,12 +88,12 @@ class ProfileController: UICollectionViewController {
 
 extension ProfileController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tweets.count
+        return currentDataSource.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
-        cell.tweet = tweets[indexPath.row]
+        cell.tweet = currentDataSource[indexPath.row]
         return cell
     }
 }
@@ -147,5 +150,10 @@ extension ProfileController: ProfileHeaderDelegate {
     
     func handleDismissal() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func didSelect(filter: ProfileFilterOptions) {
+        print("DEBUG: Did select filter: \(filter.description) in profile controller...")
+        self.selectedFilter = filter
     }
 }
