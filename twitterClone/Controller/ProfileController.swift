@@ -79,8 +79,6 @@ class ProfileController: UICollectionViewController {
     
     func fetchUserStats() {
         UserService.shared.fetchUserStats(uid: user.uid) { stats in
-            //            print("DEBUG: User has \(stats.followers) followers")
-            //            print("DEBUG: User is following \(stats.following)")
             self.user.stats = stats
             self.collectionView.reloadData()
         }
@@ -88,7 +86,6 @@ class ProfileController: UICollectionViewController {
     
     // MARK: - Helpers
     func configureCollectionView() {
-        
         collectionView.backgroundColor = .systemBackground
         collectionView.contentInsetAdjustmentBehavior = .never
         
@@ -124,6 +121,12 @@ extension ProfileController {
         header.delegate = self
         return header
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let tweet = currentDataSource[indexPath.row]
+        let controller = TweetController(tweet: tweet)
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -135,8 +138,13 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let viewModel = TweetViewModel(tweet: currentDataSource[indexPath.row])
-        let height = viewModel.size(forWidth: view.frame.width).height
-        return CGSize(width: view.frame.width, height: height + 72)
+        var height = viewModel.size(forWidth: view.frame.width).height + 72
+        
+        if currentDataSource[indexPath.row].isReply {
+            height += 20
+        }
+        
+        return CGSize(width: view.frame.width, height: height)
     }
 }
 
