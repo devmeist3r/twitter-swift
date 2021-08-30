@@ -33,6 +33,7 @@ class FeedController: UICollectionViewController {
     }
     
     // MARK: - API
+    
     func fetchTweets() {
         collectionView.refreshControl?.beginRefreshing()
         TweetService.shared.fetchTweets { tweets in
@@ -55,6 +56,7 @@ class FeedController: UICollectionViewController {
     }
     
     // MARK: - Helpers
+    
     func configureUI() {
         view.backgroundColor = .systemBackground
         
@@ -86,6 +88,7 @@ class FeedController: UICollectionViewController {
     }
     
     // MARK: - Selectors
+    
     @objc func handleRefresh() {
         fetchTweets()
     }
@@ -128,6 +131,7 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
 
 
 // MARK: - TweetCellDelegate
+
 extension FeedController: TweetCellDelegate {
     func handleLikeTapped(_ cell: TweetCell) {
         guard let tweet = cell.tweet else { return }
