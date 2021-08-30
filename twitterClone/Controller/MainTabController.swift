@@ -49,7 +49,7 @@ class MainTabController: UITabBarController {
                 self.present(nav, animated: true, completion: nil)
             }
         } else {
-            print("DEBUG: User is logged in...")
+//            print("DEBUG: User is logged in...")
             configureViewControllers()
             configureUI()
             fetchUser()

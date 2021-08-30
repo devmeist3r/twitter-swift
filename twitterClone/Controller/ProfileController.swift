@@ -54,6 +54,7 @@ class ProfileController: UICollectionViewController {
     func fetchTweets() {
         TweetService.shared.fetchTweets(forUser: user) { tweets in
             self.tweets = tweets
+            self.tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
             self.collectionView.reloadData()
         }
     }
@@ -153,7 +154,7 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 extension ProfileController: ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
         if user.isCurrentUser {
-            print("DEBUG: Show edit profile controller")
+//            print("DEBUG: Show edit profile controller")
             return
         }
         
@@ -179,7 +180,7 @@ extension ProfileController: ProfileHeaderDelegate {
     }
     
     func didSelect(filter: ProfileFilterOptions) {
-        print("DEBUG: Did select filter: \(filter.description) in profile controller...")
+//        print("DEBUG: Did select filter: \(filter.description) in profile controller...")
         self.selectedFilter = filter
     }
 }

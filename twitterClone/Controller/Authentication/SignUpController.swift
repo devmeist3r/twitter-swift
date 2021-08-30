@@ -87,7 +87,7 @@ class SignUpController: UIViewController {
     
     @objc func handleButtonSignUp() {
         guard let profileImage = profileImage else {
-            print("DEBUG: Please select a profile image...")
+//            print("DEBUG: Please select a profile image...")
             return
         }
         
