@@ -19,17 +19,17 @@ class FeedController: UICollectionViewController {
     }
     
     // MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         fetchTweets()
+        configureHeader()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barStyle = .default
-        navigationController?.navigationBar.isHidden = false
+        configureHeader()
     }
     
     // MARK: - API
@@ -87,6 +87,12 @@ class FeedController: UICollectionViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
     }
     
+    func configureHeader() {
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = .systemBackground
+    }
+    
     // MARK: - Selectors
     
     @objc func handleRefresh() {
@@ -99,7 +105,7 @@ class FeedController: UICollectionViewController {
 
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("DEBUG: Tweet count at time of collectionView function call is \(tweets.count)")
+        //        print("DEBUG: Tweet count at time of collectionView function call is \(tweets.count)")
         return tweets.count
     }
     

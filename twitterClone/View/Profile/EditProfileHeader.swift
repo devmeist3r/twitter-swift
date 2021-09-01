@@ -12,7 +12,7 @@ class EditProfileHeader: UIView {
     private let user: User
     weak var delegate: EditProfileHeaderDelegate?
     
-    private let profileImageView: UIImageView = {
+    lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.clipsToBounds = true
         iv.contentMode = .scaleAspectFill

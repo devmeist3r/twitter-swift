@@ -17,10 +17,13 @@ target 'twitterClone' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   
-  #SDWebImage
+  # SDWebImage
   pod 'SDWebImage'
   
-  #JGProgressHUD
+  # JGProgressHUD
   pod 'JGProgressHUD'
+  
+  # ActiveLabel
+  pod 'ActiveLabel'
   
 end
