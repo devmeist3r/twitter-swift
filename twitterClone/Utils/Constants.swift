@@ -9,6 +9,7 @@ let REF_USER_FOLLOWING = DB_REF.child("user-following")
 let REF_USER_TWEETS = DB_REF.child("user-tweets")
 let REF_USER_LIKES = DB_REF.child("user-likes")
 let REF_USER_REPLIES = DB_REF.child("user-replies")
+let REF_USER_USERNAMES = DB_REF.child("user-usernames")
 
 let STORAGE_REF = Storage.storage().reference()
 let STORAGE_PROFILE_IMAGES = STORAGE_REF.child("profile_images")

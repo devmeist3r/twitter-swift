@@ -6,6 +6,7 @@ protocol TweetCellDelegate: AnyObject {
     func handleProfileImageTapped(_ cell: TweetCell)
     func handleReplyTapped(_ cell: TweetCell)
     func handleLikeTapped(_ cell: TweetCell)
+    func handleFetchUser(withUsername username: String)
 }
 
 class TweetCell: UICollectionViewCell {
@@ -91,7 +92,37 @@ class TweetCell: UICollectionViewCell {
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        configureUI()
+        configureMentionHandler()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Selectors
+    @objc func handleCommentTapped() {
+        delegate?.handleReplyTapped(self)
+    }
+    
+    @objc func handleRetweetTapped() {
+        print("DEBUG: Retweet Tapped")
+    }
+    
+    @objc func handleLikeTapped() {
+        delegate?.handleLikeTapped(self)
+    }
+    
+    @objc func handleShareTapped() {
+        print("DEBUG: Share Tapped")
+    }
+    
+    @objc func handleProfileImageTapped() {
+        delegate?.handleProfileImageTapped(self)
+    }
+    
+    // MARK: - Helpers
+    func configureUI() {
         backgroundColor = .systemBackground
         
         let captionStack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
@@ -131,33 +162,6 @@ class TweetCell: UICollectionViewCell {
         underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - Selectors
-    @objc func handleCommentTapped() {
-        delegate?.handleReplyTapped(self)
-    }
-    
-    @objc func handleRetweetTapped() {
-        print("DEBUG: Retweet Tapped")
-    }
-    
-    @objc func handleLikeTapped() {
-        delegate?.handleLikeTapped(self)
-    }
-    
-    @objc func handleShareTapped() {
-        print("DEBUG: Share Tapped")
-    }
-    
-    @objc func handleProfileImageTapped() {
-        delegate?.handleProfileImageTapped(self)
-    }
-    
-    // MARK: - Helpers
-    
     func configure() {
         guard let tweet = tweet else { return }
         let viewModel = TweetViewModel(tweet: tweet)
@@ -172,5 +176,11 @@ class TweetCell: UICollectionViewCell {
         
         replyLabel.isHidden = viewModel.shouldHideReplyLabel
         replyLabel.text = viewModel.replyText
+    }
+    
+    func configureMentionHandler() {
+        captionLabel.handleMentionTap { username in
+            self.delegate?.handleFetchUser(withUsername: username)
+        }
     }
 }
