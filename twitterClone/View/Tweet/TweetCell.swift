@@ -1,3 +1,4 @@
+import ActiveLabel
 import UIKit
 
 // MARK: - Protocol
@@ -32,19 +33,20 @@ class TweetCell: UICollectionViewCell {
         return iv
     }()
     
-    private let replyLabel: UILabel = {
-        let label = UILabel()
+    private let replyLabel: ActiveLabel = {
+        let label = ActiveLabel()
         label.textColor = .lightGray
         label.font = UIFont.init(name: "Roboto-Regular", size: 12)
-        label.text = ""
+        label.mentionColor = .twitterBlue
         return label
     }()
     
-    private let captionLabel: UILabel = {
-        let label = UILabel()
+    private let captionLabel: ActiveLabel = {
+        let label = ActiveLabel()
         label.font = UIFont(name: "Roboto-Regular", size: 14)
         label.numberOfLines = 0
-        label.text = ""
+        label.mentionColor = .twitterBlue
+        label.hashtagColor = .twitterBlue
         return label
     }()
     

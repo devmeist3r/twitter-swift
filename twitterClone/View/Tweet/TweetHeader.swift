@@ -1,3 +1,4 @@
+import ActiveLabel
 import UIKit
 
 protocol TweetHeaderDelegate: AnyObject {
@@ -43,11 +44,12 @@ class TweetHeader: UICollectionReusableView {
         return label
     }()
     
-    private let captionLabel: UILabel = {
-        let label = UILabel()
+    private let captionLabel: ActiveLabel = {
+        let label = ActiveLabel()
         label.font = UIFont(name: "Roboto-Bold", size: 16)
         label.numberOfLines = 0
-        label.text = ""
+        label.hashtagColor = .twitterBlue
+        label.mentionColor = .twitterBlue
         return label
     }()
     
@@ -68,10 +70,11 @@ class TweetHeader: UICollectionReusableView {
         return button
     }()
     
-    private let replyLabel: UILabel = {
-        let label = UILabel()
+    private let replyLabel: ActiveLabel = {
+        let label = ActiveLabel()
         label.textColor = .lightGray
         label.font = UIFont.init(name: "Roboto-Regular", size: 12)
+        label.mentionColor = .twitterBlue
         return label
     }()
     
