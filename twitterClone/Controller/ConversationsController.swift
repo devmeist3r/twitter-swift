@@ -4,12 +4,10 @@ import Firebase
 class ConversationsController: UIViewController {
     
     // MARK: - Properties
-   
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUI()
     }
     
@@ -18,7 +16,7 @@ class ConversationsController: UIViewController {
     
     // MARK: - Helpers
     func configureUI() {
-        
+        view.backgroundColor = .systemBackground
     }
     
     

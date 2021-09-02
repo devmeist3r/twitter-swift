@@ -31,7 +31,7 @@
 		E85D888C24F686910074F371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85D888A24F686910074F371 /* LaunchScreen.storyboard */; };
 		E85D889C24F6877D0074F371 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889B24F6877D0074F371 /* MainTabController.swift */; };
 		E85D889E24F68AD50074F371 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889D24F68AD50074F371 /* FeedController.swift */; };
-		E85D88A024F68B300074F371 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889F24F68B300074F371 /* ExploreController.swift */; };
+		E85D88A024F68B300074F371 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D889F24F68B300074F371 /* SearchController.swift */; };
 		E85D88A224F68B520074F371 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D88A124F68B520074F371 /* NotificationsController.swift */; };
 		E85D88A424F68B910074F371 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D88A324F68B910074F371 /* ConversationsController.swift */; };
 		E85D88A624F695DF0074F371 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85D88A524F695DF0074F371 /* Extensions.swift */; };
@@ -87,7 +87,7 @@
 		E85D888D24F686910074F371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85D889B24F6877D0074F371 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		E85D889D24F68AD50074F371 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
-		E85D889F24F68B300074F371 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		E85D889F24F68B300074F371 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		E85D88A124F68B520074F371 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		E85D88A324F68B910074F371 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		E85D88A524F695DF0074F371 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 			children = (
 				E845430424F6B49500A3F095 /* Authentication */,
 				E85D88A324F68B910074F371 /* ConversationsController.swift */,
-				E85D889F24F68B300074F371 /* ExploreController.swift */,
+				E85D889F24F68B300074F371 /* SearchController.swift */,
 				E85D889D24F68AD50074F371 /* FeedController.swift */,
 				E85D889B24F6877D0074F371 /* MainTabController.swift */,
 				E85D88A124F68B520074F371 /* NotificationsController.swift */,
@@ -502,7 +502,7 @@
 				E85D888224F6868E0074F371 /* SceneDelegate.swift in Sources */,
 				E8229DD425098587007B91CC /* UserService.swift in Sources */,
 				E845430824F6B54300A3F095 /* SignUpController.swift in Sources */,
-				E85D88A024F68B300074F371 /* ExploreController.swift in Sources */,
+				E85D88A024F68B300074F371 /* SearchController.swift in Sources */,
 				E8E93B9E24F934E4006F485E /* AuthService.swift in Sources */,
 				E8E2A899267A41A0001D606F /* TweetController.swift in Sources */,
 			);
