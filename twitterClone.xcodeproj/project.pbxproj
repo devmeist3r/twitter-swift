@@ -50,6 +50,7 @@
 		E8E5508126DC6E46004CD69B /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5508026DC6E46004CD69B /* EditProfileHeader.swift */; };
 		E8E93B9C24F927EB006F485E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9B24F927EB006F485E /* Constants.swift */; };
 		E8E93B9E24F934E4006F485E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E93B9D24F934E4006F485E /* AuthService.swift */; };
+		E8F999DE26E07E4F0074159A /* EditProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F999DD26E07E4F0074159A /* EditProfileFooter.swift */; };
 		E8FA3DC0268B729300D59B41 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3DBF268B729300D59B41 /* Notification.swift */; };
 		E8FA3DC2268B918B00D59B41 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA3DC1268B918B00D59B41 /* NotificationService.swift */; };
 		E8FEE4BC24F7F97100624BF5 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */; };
@@ -105,6 +106,7 @@
 		E8E5508026DC6E46004CD69B /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
 		E8E93B9B24F927EB006F485E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8E93B9D24F934E4006F485E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E8F999DD26E07E4F0074159A /* EditProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFooter.swift; sourceTree = "<group>"; };
 		E8FA3DBF268B729300D59B41 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		E8FA3DC1268B918B00D59B41 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -195,7 +197,7 @@
 				E85D889624F686D80074F371 /* API */,
 				E82D770D24FC822C006A0D74 /* Components */,
 				E85D889724F686DA0074F371 /* Controller */,
-				E8FEE4A924F7F94B00624BF5 /* fonts */,
+				E8FEE4A924F7F94B00624BF5 /* Fonts */,
 				E85D889A24F686E30074F371 /* Model */,
 				E83E1435255497B10045B0FC /* Supporting Files */,
 				E85D889324F686C10074F371 /* Utils */,
@@ -259,6 +261,7 @@
 		E85D889924F686E10074F371 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8F999DC26E07E310074159A /* EditProfile */,
 				E8B67C7926A638B000A8E227 /* Notification */,
 				E8E2A89C267A468E001D606F /* Profile */,
 				E8E2A89D267A469D001D606F /* Tweet */,
@@ -293,8 +296,6 @@
 				E8410AB025388F8C0024D93F /* ProfileFilterCell.swift */,
 				E81FA57E252389560087A5D9 /* ProfileHeader.swift */,
 				E8410AAD253880CE0024D93F /* ProfileViewFilter.swift */,
-				E8E5508026DC6E46004CD69B /* EditProfileHeader.swift */,
-				E8AE8E5C26DDE3710050CAB3 /* EditProfileCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -325,13 +326,23 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		E8FEE4A924F7F94B00624BF5 /* fonts */ = {
+		E8F999DC26E07E310074159A /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E8E5508026DC6E46004CD69B /* EditProfileHeader.swift */,
+				E8AE8E5C26DDE3710050CAB3 /* EditProfileCell.swift */,
+				E8F999DD26E07E4F0074159A /* EditProfileFooter.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		E8FEE4A924F7F94B00624BF5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				E8FEE4B424F7F97100624BF5 /* Roboto-Bold.ttf */,
 				E8FEE4B024F7F97000624BF5 /* Roboto-Regular.ttf */,
 			);
-			path = fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +495,7 @@
 				E8AE8E5B26DDE2F90050CAB3 /* EditProfileViewModel.swift in Sources */,
 				E85D88A224F68B520074F371 /* NotificationsController.swift in Sources */,
 				E829FEDB26822E19002A3457 /* ActionSheetViewModel.swift in Sources */,
+				E8F999DE26E07E4F0074159A /* EditProfileFooter.swift in Sources */,
 				E8E2A897267964F5001D606F /* UserRelantionsStats.swift in Sources */,
 				E8E2A89B267A465F001D606F /* TweetHeader.swift in Sources */,
 				E827600525222726002831D2 /* TweetCell.swift in Sources */,

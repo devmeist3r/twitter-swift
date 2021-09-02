@@ -54,37 +54,25 @@ class TweetCell: UICollectionViewCell {
     private let infoLabel = UILabel()
     
     private lazy var commentButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "message"), for: .normal)
-        button.tintColor = .darkGray
-        button.setDimensions(width: 20, height: 20)
+        let button = createButton(withImageName: "message")
         button.addTarget(self, action: #selector(handleCommentTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var retweetButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "repeat"), for: .normal)
-        button.tintColor = .darkGray
-        button.setDimensions(width: 20, height: 20)
+        let button = createButton(withImageName: "repeat")
         button.addTarget(self, action: #selector(handleRetweetTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var likeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "suit.heart"), for: .normal)
-        button.tintColor = .darkGray
-        button.setDimensions(width: 24, height: 20)
+        let button = createButton(withImageName: "suit.heart")
         button.addTarget(self, action: #selector(handleLikeTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var shareButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
-        button.tintColor = .darkGray
-        button.setDimensions(width: 20, height: 20)
+        let button = createButton(withImageName: "square.and.arrow.up")
         button.addTarget(self, action: #selector(handleShareTapped), for: .touchUpInside)
         return button
     }()
@@ -182,5 +170,13 @@ class TweetCell: UICollectionViewCell {
         captionLabel.handleMentionTap { username in
             self.delegate?.handleFetchUser(withUsername: username)
         }
+    }
+    
+    func createButton(withImageName imageName: String) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: imageName), for: .normal)
+        button.tintColor = .darkGray
+        button.setDimensions(width: 22, height: 20)
+        return button
     }
 }

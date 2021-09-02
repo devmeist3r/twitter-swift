@@ -11,6 +11,7 @@ class EditProfileController: UITableViewController {
     // MARK: - Properties
     private var user: User
     private lazy var headerView = EditProfileHeader(user: user)
+    private lazy var footerView = EditProfileFooter()
     private let imagePicker = UIImagePickerController()
     private var userInfoChange = false
     private var imageChanged: Bool {
@@ -106,7 +107,8 @@ class EditProfileController: UITableViewController {
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 180)
         headerView.delegate = self
         tableView.bounces = false
-        tableView.tableFooterView = UIView()
+        footerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
+        tableView.tableFooterView = footerView
         tableView.register(EditProfileCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     
