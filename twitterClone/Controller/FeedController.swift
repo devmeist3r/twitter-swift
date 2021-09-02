@@ -82,6 +82,7 @@ class FeedController: UICollectionViewController {
         profileImageView.setDimensions(width: 32, height: 32)
         profileImageView.layer.cornerRadius = 32 / 2
         profileImageView.layer.masksToBounds = true
+        profileImageView.contentMode = .scaleAspectFill
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleProfileImageTap))
         profileImageView.addGestureRecognizer(tap)
@@ -116,7 +117,6 @@ class FeedController: UICollectionViewController {
 
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //        print("DEBUG: Tweet count at time of collectionView function call is \(tweets.count)")
         return tweets.count
     }
     
