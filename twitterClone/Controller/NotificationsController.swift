@@ -5,11 +5,13 @@ private let reuseIdentifier = "NotificationCell"
 class NotificationsController: UITableViewController {
     
     // MARK: - Properties
+    
     private var notifications = [Notification]() {
         didSet { tableView.reloadData() }
     }
     
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -25,10 +27,11 @@ class NotificationsController: UITableViewController {
     // MARK: - Selectors
     
     @objc func handleRefresh() {
-       fetchNotifications()
+        fetchNotifications()
     }
     
     // MARK: - API
+    
     func fetchNotifications() {
         refreshControl?.beginRefreshing()
         NotificationService.shared.fetchNotification { notifications in
@@ -39,11 +42,13 @@ class NotificationsController: UITableViewController {
     }
     
     func checkIfUserIsFollowed(notifications: [Notification]) {
-        for (index, notification) in notifications.enumerated() {
-            if case .follow = notification.type {
-                let user = notification.user
-                
-                UserService.shared.checkIsUserIsFollowed(uid: user.uid) { isFollowed in
+        guard !notifications.isEmpty else { return }
+        notifications.forEach { notification in
+            guard case .follow = notification.type else { return }
+            let user = notification.user
+            
+            UserService.shared.checkIsUserIsFollowed(uid: user.uid) { isFollowed in
+                if let index = self.notifications.firstIndex(where: {$0.user.uid == notification.user.uid }) {
                     self.notifications[index].user.isFollowed = isFollowed
                 }
             }
@@ -51,6 +56,7 @@ class NotificationsController: UITableViewController {
     }
     
     // MARK: - Helpers
+    
     func configureUI() {
         view.backgroundColor = .systemBackground
         navigationItem.title = "Notifications"
@@ -107,9 +113,6 @@ extension NotificationsController: NotificationCellDelegate {
     
     func handleTapFollow(_ cell: NotificationCell) {
         guard let user = cell.notification?.user else { return }
-        
-//        print("DEBUG: User is followed \(user.isFollowed)")
-        
         if user.isFollowed {
             UserService.shared.unfollowUser(uid: user.uid) { err, ref in
                 cell.notification?.user.isFollowed = false
