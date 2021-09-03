@@ -1,0 +1,13 @@
+name: twitterClone
+options:
+  bundleIdPrefix: com.devmeist3r
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+  developmentLanguage: en
+  postGenCommand: pod install
+targets:
+  twitterClone:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources: [twitterClone]

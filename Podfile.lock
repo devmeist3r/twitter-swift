@@ -738,7 +738,7 @@ PODS:
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
     - MDFTextAccessibility
-  - MDFInternationalization (2.0.0)
+  - MDFInternationalization (3.0.0)
   - MDFTextAccessibility (2.0.1)
   - MotionAnimator (4.0.1):
     - MotionInterchange (~> 3.0)
@@ -807,7 +807,7 @@ SPEC CHECKSUMS:
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
-  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
   MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
@@ -815,6 +815,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 0a6552fb311b4b084ad664cb718a91eb7608a73f
+PODFILE CHECKSUM: fca61ce80322e3d30aeb3a8c9b390c51a17bad43
 
 COCOAPODS: 1.10.1
