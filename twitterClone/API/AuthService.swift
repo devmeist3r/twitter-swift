@@ -1,5 +1,6 @@
 import Foundation
 import Firebase
+import FirebaseAuth
 
 struct AuthCredentials {
     let profileImage: UIImage

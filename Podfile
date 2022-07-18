@@ -11,11 +11,11 @@ target 'twitterClone' do
   pod 'MaterialComponents'
   
   # Firebase
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'Firebase/Storage'
+  pod 'Firebase/Analytics', '8.12.1'
+  pod 'Firebase/Auth', '8.12.1'
+  pod 'Firebase/Core', '8.12.1'
+  pod 'Firebase/Database', '8.12.1'
+  pod 'Firebase/Storage', '8.12.1'
   
   # SDWebImage
   pod 'SDWebImage'
